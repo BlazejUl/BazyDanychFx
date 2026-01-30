@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ListView?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="pl.buliasz.widok.KontrolerPController" >
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <HBox>
+        <Button fx:id="toKierownik" text="Przejdź do kierownika" onAction="#TryKierownik"/>
+        <Text fx:id="blod2"/>
+    </HBox>
+
+    <HBox>
+        <ListView fx:id="seanse"/>
+        <Button fx:id="refresh" text="aktualizuj" onAction="#aktualizuj"/>
+    </HBox>
+
+    <HBox>
+        <TextField fx:id="seansId" maxWidth="60"/>
+        <Button fx:id="findmovie" text="znajdź_seans" onAction="#Szukaj"/>
+        <Text fx:id="blod"/>
+    </HBox>
+
+    <Button fx:id="rezerwacje" text="przejdź do rezerwacji"/>
+
+</VBox>

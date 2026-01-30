@@ -21,4 +21,12 @@ public class ListaSeans {
         }
         return null;
     }
+
+    List<ISeans> weźWszystkoPoIdFilmu(int id){
+        ArrayList<ISeans> out = new ArrayList<>();
+        for (ISeans seans:listaSeans){
+            if(seans.getIdFilm()==id) out.add(seans);
+        }
+        return out;
+    }
 }

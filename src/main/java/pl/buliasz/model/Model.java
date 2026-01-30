@@ -20,6 +20,11 @@ public class Model implements IModel{
     }
 
     @Override
+    public List<ISeans> dajWszystkieSeansePoIdFilmu(int id) {
+        return listaSeans.weźWszystkoPoIdFilmu(id);
+    }
+
+    @Override
     public ISeans dajSeans(int id) {
         return listaSeans.znajdźSeans(id);
     }

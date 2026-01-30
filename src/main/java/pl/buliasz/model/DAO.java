@@ -7,11 +7,10 @@ public class DAO implements IDAO{
     private String username;
     private String url;
 
-    public DAO(String password, String username, String url){
+    public DAO(String password, String username, String url) {
         this.password = password;
         this.username = username;
         this.url = url;
-
     }
 
     @Override
@@ -110,5 +109,15 @@ public class DAO implements IDAO{
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public void tryConnection() throws SQLException {
+        DriverManager.getConnection(url,username,password).close();
+    }
+
+    @Override
+    public String dajUsername() {
+        return username;
     }
 }

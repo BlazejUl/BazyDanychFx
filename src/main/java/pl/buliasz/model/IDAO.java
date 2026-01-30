@@ -24,4 +24,8 @@ public interface IDAO {
     ResultSet getConnection(String sql);
 
     void voidConnection(String sql);
+
+    void tryConnection() throws SQLException;
+
+    String dajUsername();
 }

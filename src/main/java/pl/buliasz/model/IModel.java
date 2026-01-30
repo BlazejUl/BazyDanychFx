@@ -6,6 +6,8 @@ public interface IModel {
 
     List<ISeans> dajWszystkieSeanse();
 
+    List<ISeans> dajWszystkieSeansePoIdFilmu(int id);
+
     ISeans dajSeans(int id);
 
     List<IRezerwacja> dajWszystkieRezerwacje();
