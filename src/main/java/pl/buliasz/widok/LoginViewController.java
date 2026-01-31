@@ -5,9 +5,12 @@ import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import pl.buliasz.Instancje.DAOinstance;
+import pl.buliasz.Instancje.KontrolerPracownikInstance;
 import pl.buliasz.Instancje.ModelInstance;
+import pl.buliasz.kontroler.KontrolerPracownik;
 import pl.buliasz.model.DAO;
 import pl.buliasz.model.IDAO;
+import pl.buliasz.model.IModel;
 import pl.buliasz.model.Model;
 
 import java.io.IOException;
@@ -22,9 +25,11 @@ public class LoginViewController {
     @FXML
     public Text blad;
     public IDAO dao;
+    public IModel model;
 
     DAOinstance data = DAOinstance.getInstance();
     ModelInstance modelInstance = ModelInstance.getInstance();
+    KontrolerPracownikInstance pracownikInstance = KontrolerPracownikInstance.getInstance();
 
     @FXML
     protected void onLoginButtonClick() throws IOException {
@@ -34,8 +39,10 @@ public class LoginViewController {
             String password = this.password.getText();
             dao = new DAO(password,name,url);
             dao.tryConnection();
-            modelInstance.setModel(new Model(dao));
+            model = new Model(dao);
+            modelInstance.setModel(model);
             data.setDao(dao);
+            pracownikInstance.setKontroler(new KontrolerPracownik(model));
             new KontrolerPWindow().open();
 
             root.getScene().getWindow().hide();

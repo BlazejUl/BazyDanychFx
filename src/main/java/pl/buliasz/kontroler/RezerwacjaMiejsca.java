@@ -10,8 +10,12 @@ public class RezerwacjaMiejsca {
     private String nazwiskoKlienta;
     private String telefonKlienta;
 
-    RezerwacjaMiejsca(IModel model){
+    RezerwacjaMiejsca(IModel model,int idSeans,int miejsce,String dataRezerwacji,
+                      String nazwiskoKlienta,String telefonKlienta){
         this.model = model;
+        podanieDanychRezerwacji(idSeans, miejsce, dataRezerwacji,
+                 nazwiskoKlienta, telefonKlienta);
+        zarezerwowanieMiejsca();
     }
 
     public void podanieDanychRezerwacji(int idSeans,int miejsce,String dataRezerwacji,

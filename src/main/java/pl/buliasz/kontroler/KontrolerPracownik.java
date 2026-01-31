@@ -9,7 +9,7 @@ import java.util.List;
 public class KontrolerPracownik implements IKontrolerPracownik{
     IModel model;
 
-    KontrolerPracownik(IModel model){
+    public KontrolerPracownik(IModel model){
         this.model = model;
     }
     @Override
@@ -18,7 +18,11 @@ public class KontrolerPracownik implements IKontrolerPracownik{
     }
 
     @Override
-    public void rezerwacjaMiejsca(){new RezerwacjaMiejsca(model);}
+    public void rezerwacjaMiejsca(int idSeans,int miejsce,String dataRezerwacji,
+                                  String nazwiskoKlienta,String telefonKlienta){
+        new RezerwacjaMiejsca(model, idSeans, miejsce, dataRezerwacji,
+                 nazwiskoKlienta, telefonKlienta);
+    }
 
     @Override
     public List<IRezerwacja> wyszukajRezerwację(Integer filmID){

@@ -15,6 +15,24 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
+    <HBox>
+        <ListView fx:id="rezerwacje"/>
+        <Button text="aktualizuj" onAction="#aktualizuj"/>
+    </HBox>
 
+    <HBox>
+        <TextField fx:id="seansId" maxWidth="60"/>
+        <Button text="pokaz_rezerwacje" onAction="#Szukaj"/>
+        <Text fx:id="blod"/>
+    </HBox>
+
+    <VBox>
+        <HBox>
+            <TextField fx:id="rezerwacjaId" maxWidth="60"/>
+            <Button text="rezerwacja_do_edycji" onAction="#SzukajRezerwacja"/>
+            <Text fx:id="blod2"/>
+        </HBox>
+        <HBox></HBox>
+    </VBox>
 
 </VBox>

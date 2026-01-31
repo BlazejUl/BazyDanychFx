@@ -31,6 +31,6 @@
         <Text fx:id="blod"/>
     </HBox>
 
-    <Button fx:id="rezerwacje" text="przejdź do rezerwacji"/>
+    <Button fx:id="rezerwacje" text="przejdź do rezerwacji" onAction="#Rezerwacje"/>
 
 </VBox>

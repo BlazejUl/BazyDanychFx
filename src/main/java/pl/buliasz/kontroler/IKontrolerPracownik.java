@@ -9,7 +9,8 @@ public interface IKontrolerPracownik {
 
     List<ISeans> wyszukanieSeansów(Integer filmID);
 
-    void rezerwacjaMiejsca();
+    void rezerwacjaMiejsca(int idSeans,int miejsce,String dataRezerwacji,
+                           String nazwiskoKlienta,String telefonKlienta);
 
     List<IRezerwacja> wyszukajRezerwację(Integer filmID);
 

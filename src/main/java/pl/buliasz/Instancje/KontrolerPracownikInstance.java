@@ -12,11 +12,11 @@ public class KontrolerPracownikInstance {
         return instance;
     }
 
-    public IKontrolerPracownik getModel() {
+    public IKontrolerPracownik getKontroler() {
         return kontroler;
     }
 
-    public void setModel(IKontrolerPracownik kontroler) {
+    public void setKontroler(IKontrolerPracownik kontroler) {
         this.kontroler = kontroler;
     }
 }

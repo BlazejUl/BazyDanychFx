@@ -5,7 +5,7 @@ import pl.buliasz.model.IModel;
 public class KontrolerKierownik implements IKontrolerKierownik{
     IModel model;
 
-    KontrolerKierownik(IModel model){
+     public KontrolerKierownik(IModel model){
         this.model = model;
     }
     @Override
