@@ -10,7 +10,7 @@ public class RezerwacjeWindow {
     public void open() throws IOException {
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(KontrolerPWindow.class.getResource("rezerwacje-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        Scene scene = new Scene(fxmlLoader.load(), 400, 600);
         stage.setTitle("Kino Rezerwacje");
         stage.setScene(scene);
         stage.show();

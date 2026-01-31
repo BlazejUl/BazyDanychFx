@@ -10,13 +10,13 @@ import pl.buliasz.Instancje.ModelInstance;
 
 import java.io.IOException;
 
-public class Logowanie extends Application {
+public class Start extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         new DAOinstance();
         new ModelInstance();
         new KontrolerPracownikInstance();
-        FXMLLoader fxmlLoader = new FXMLLoader(Logowanie.class.getResource("login-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Start.class.getResource("login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 400, 300);
         stage.setTitle("Logowanie");
         stage.setScene(scene);

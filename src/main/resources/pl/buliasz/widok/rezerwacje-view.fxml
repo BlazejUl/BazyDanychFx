@@ -18,21 +18,54 @@
     <HBox>
         <ListView fx:id="rezerwacje"/>
         <Button text="aktualizuj" onAction="#aktualizuj"/>
+        <Text fx:id="blod6"/>
     </HBox>
 
     <HBox>
         <TextField fx:id="seansId" maxWidth="60"/>
-        <Button text="pokaz_rezerwacje" onAction="#Szukaj"/>
+        <Button text="pokaz rezerwacje" onAction="#Szukaj"/>
         <Text fx:id="blod"/>
     </HBox>
 
-    <VBox>
+
         <HBox>
             <TextField fx:id="rezerwacjaId" maxWidth="60"/>
-            <Button text="rezerwacja_do_edycji" onAction="#SzukajRezerwacja"/>
+            <Button text="znajdz do edycji" onAction="#Znajdz"/>
             <Text fx:id="blod2"/>
+            <Button text="edytuj e" onAction="#EdytujRezeracja"/>
+            <Text fx:id="blod4"/>
         </HBox>
-        <HBox></HBox>
-    </VBox>
+        <HBox>
+            <VBox>
+                <Text text="Idseansu"/>
+                <TextField fx:id="Idseans" maxWidth="60"/>
+            </VBox>
+            <VBox>
+                <Text text="Miejsce e"/>
+                <TextField fx:id="miejsce" maxWidth="60"/>
+            </VBox>
+            <VBox>
+                <Text text="  Data"/>
+                <TextField fx:id="dataR" maxWidth="100"/>
+            </VBox>
+            <VBox>
+                <Text text="Nazwisko e"/>
+                <TextField fx:id="nazwisko" maxWidth="100"/>
+            </VBox>
+            <VBox>
+                <Text text="Telefon e"/>
+                <TextField fx:id="telefon" maxWidth="100"/>
+            </VBox>
+        </HBox>
+
+    <HBox>
+        <Button text="stworz rezerwacje" onAction="#StworzRezerwacja"/>
+        <Text fx:id="blod3"/>
+    </HBox>
+
+    <HBox>
+        <Button text="usuń rezerwacje" onAction="#UsunRezerwacja"/>
+        <Text fx:id="blod7"/>
+    </HBox>
 
 </VBox>
