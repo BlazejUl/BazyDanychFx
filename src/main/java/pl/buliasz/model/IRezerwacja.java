@@ -6,7 +6,7 @@ public interface IRezerwacja {
 
     void setDataRezerwacji(String dataRezerwacji);
 
-    int getId();
+    Integer getId();
 
     void setId(int id);
 

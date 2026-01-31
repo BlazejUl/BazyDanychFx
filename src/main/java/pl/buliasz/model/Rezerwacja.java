@@ -8,7 +8,7 @@ public class Rezerwacja implements IRezerwacja{
     String nazwiskoKlienta;
     String telefonKlienta;
 
-    public Rezerwacja(int id, int idSeans,  int miejsce, String dataRezerwacji, String nazwiskoKlienta, String telefonKlienta) {
+    public Rezerwacja(Integer id, int idSeans,  int miejsce, String dataRezerwacji, String nazwiskoKlienta, String telefonKlienta) {
         this.dataRezerwacji = dataRezerwacji;
         this.id = id;
         this.idSeans = idSeans;
@@ -34,7 +34,7 @@ public class Rezerwacja implements IRezerwacja{
         this.dataRezerwacji = dataRezerwacji;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
