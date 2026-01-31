@@ -25,8 +25,8 @@ public class KontrolerPracownik implements IKontrolerPracownik{
     }
 
     @Override
-    public List<IRezerwacja> wyszukajRezerwację(Integer filmID){
-        return new WyświetlRezerwacje(model,filmID).dajRezerwacje();
+    public List<IRezerwacja> wyszukajRezerwację(Integer SeansID){
+        return new WyświetlRezerwacje(model,SeansID).dajRezerwacje();
     }
 
     @Override

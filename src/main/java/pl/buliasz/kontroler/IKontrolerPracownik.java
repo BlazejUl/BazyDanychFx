@@ -12,7 +12,7 @@ public interface IKontrolerPracownik {
     void rezerwacjaMiejsca(int idSeans,int miejsce,String dataRezerwacji,
                            String nazwiskoKlienta,String telefonKlienta);
 
-    List<IRezerwacja> wyszukajRezerwację(Integer filmID);
+    List<IRezerwacja> wyszukajRezerwację(Integer SeansID);
 
     IRezerwacja dajRezerwacje(Integer id);
 
