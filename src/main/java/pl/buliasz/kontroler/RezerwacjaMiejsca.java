@@ -24,7 +24,7 @@ public class RezerwacjaMiejsca {
     }
 
     public void zarezerwowanieMiejsca(){
-        if (!nazwiskoKlienta.isBlank()) model.dodajRezerwacja(idSeans, miejsce, dataRezerwacji,
+        model.dodajRezerwacja(idSeans, miejsce, dataRezerwacji,
                 nazwiskoKlienta, telefonKlienta);
     }
 }

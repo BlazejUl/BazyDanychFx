@@ -16,19 +16,10 @@ public class WyświetlRezerwacje {
         this.model = model;
         this.id_seansu = id_seansu;
         rezerwacje = this.model.dajWszystkieRezerwacjePoIdSeansu(this.id_seansu);
-        wyświetl(rezerwacje);
     }
 
-    public List<String> wyświetl(List<IRezerwacja> rezerwacje){
-        List<String> out = new ArrayList<>();
-        for (IRezerwacja rezerwacja:rezerwacje){
-            String rezerwStr = rezerwacja.getId()+" "+rezerwacja.getIdSeans()+" "+rezerwacja.getMiejsce()+" "+
-                    rezerwacja.getDataRezerwacji()+" "+rezerwacja.getNazwiskoKlienta()+" "+
-                    rezerwacja.getTelefonKlienta();
-            out.add(rezerwStr);
-            System.out.println(rezerwStr);
-        }
-        return out;
+    public List<IRezerwacja> dajRezerwacje(){
+        return rezerwacje;
     }
 
 }

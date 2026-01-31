@@ -8,21 +8,24 @@ public class ModyfikacjaDanychSeansu {
     int id_seansu;
     ISeans seans;
 
-    ModyfikacjaDanychSeansu(IModel model, int id_seansu){
+    ModyfikacjaDanychSeansu(IModel model, int id_seansu,Integer salaId,Integer filmId, String początek,String koniec,Boolean nap,Boolean dub,Boolean w3d){
         this.model = model;
         this.id_seansu = id_seansu;
         seans = model.dajSeans(this.id_seansu);
-        modyfikacjaSeansu();
-        model.edytujSeans(seans);
+        modyfikacjaSeansu(salaId, filmId, początek, koniec, nap, dub, w3d);
+        modyfikuj();
     }
 
-    public void modyfikacjaSeansu(){
-        seans.setIdSali(seans.getIdSali());
-        seans.setIdFilm(seans.getIdFilm());
-        seans.setPoczątek(seans.getPoczątek());
-        seans.setKoniec(seans.getKoniec());
-        seans.setNapisy(seans.getNapisy());
-        seans.setDubbing(seans.getDubbing());
-        seans.setWersja3D(seans.getWersja3D());
+    public void modyfikacjaSeansu(Integer salaId,Integer filmId, String początek,String koniec,Boolean nap,Boolean dub,Boolean w3d){
+        seans.setIdSali(salaId);
+        seans.setIdFilm(filmId);
+        seans.setPoczątek(początek);
+        seans.setKoniec(koniec);
+        seans.setNapisy(nap);
+        seans.setDubbing(dub);
+        seans.setWersja3D(w3d);
+    }
+    public void modyfikuj(){
+        model.edytujSeans(seans);
     }
 }

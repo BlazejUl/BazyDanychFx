@@ -5,20 +5,20 @@ import pl.buliasz.model.IRezerwacja;
 
 public class ModyfikacjaRezerwacji {
     IModel model;
-    int id_rezerwacji;
+    Integer id_rezerwacji;
     IRezerwacja rezerwacja;
 
-    ModyfikacjaRezerwacji(IModel model, int id){
+    ModyfikacjaRezerwacji(IModel model, Integer id,Integer miejsce,String nazwisko,String telefon){
         this.model = model;
         this.id_rezerwacji = id;
         rezerwacja = this.model.dajRezerwacje(id);
-        modyfikacjaRezerwacji();
+        modyfikacjaRezerwacji(miejsce,nazwisko,telefon);
         this.model.edytujRezerwacja(rezerwacja);
     }
 
-    public void modyfikacjaRezerwacji(){
-        rezerwacja.setMiejsce(34);
-        rezerwacja.setNazwiskoKlienta(rezerwacja.getNazwiskoKlienta());
-        rezerwacja.setTelefonKlienta("444782432");
+    public void modyfikacjaRezerwacji(Integer miejsce,String nazwisko,String telefon){
+        rezerwacja.setMiejsce(miejsce);
+        rezerwacja.setNazwiskoKlienta(nazwisko);
+        rezerwacja.setTelefonKlienta(telefon);
     }
 }

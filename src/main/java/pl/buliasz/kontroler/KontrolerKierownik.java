@@ -9,18 +9,18 @@ public class KontrolerKierownik implements IKontrolerKierownik{
         this.model = model;
     }
     @Override
-    public void modyfikacjaDanychSeansu() {
-        ModyfikacjaDanychSeansu pu06 = new ModyfikacjaDanychSeansu(model,9);
+    public void modyfikacjaDanychSeansu(Integer seansId,Integer salaId,Integer filmId, String początek,String koniec,Boolean nap,Boolean dub,Boolean w3d) {
+        new ModyfikacjaDanychSeansu(model, seansId, salaId, filmId, początek, koniec, nap, dub, w3d);
     }
 
     @Override
-    public void stworzenieNowegoSeansu() {
-        StworzenieNowegoSeansu pu07 = new StworzenieNowegoSeansu(model);
+    public void stworzenieNowegoSeansu(int idSali, int idFilm, String początek) {
+        new StworzenieNowegoSeansu(model, idSali, idFilm, początek);
     }
 
     @Override
-    public void usunięcieSeansu() {
-        UsunięcieSeansu pu05 = new UsunięcieSeansu(model,9);
+    public void usunięcieSeansu(Integer seansID) {
+        new UsunięcieSeansu(model,seansID);
     }
 
 }
